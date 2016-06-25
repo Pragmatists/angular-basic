@@ -5,8 +5,8 @@ module.exports = function () {
         products: _.times(100, function(n){
             return {
                 id: n,
-                name: faker.commerce.productName,
-                price: faker.commerce.price
+                name: faker.commerce.productName(),
+                price: faker.commerce.price()
             }
         }),
         user: {
@@ -14,4 +14,4 @@ module.exports = function () {
             password: "pas"
         }
     }
-}
+};

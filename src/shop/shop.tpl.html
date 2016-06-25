@@ -1,1 +1,12 @@
-shop
+<div id="shop">
+    <div class="filter">
+        <button ng-click="shop.order='price'">Order by Price</button>
+        <button ng-click="shop.order='name'">Order by name</button>
+    </div>
+    <div class="products">
+        <div class="product" ng-repeat="product in shop.products | orderBy : shop.order">
+            <div ng-bind="product.name"></div>
+            <div ng-bind="product.price"></div>
+        </div>
+    </div>
+</div>
