@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "dependencies": {
     "angular": "1.5.0",
-    "ui-router": "1.0.0-alpha.5"
+    "angular-ui-router": "1.0.0-alpha.5"
   },
   "private": true
 }

@@ -24,14 +24,14 @@ var imagesSrc = [
 ];
 
 var jsSources = [
-
     './src/app.js',
-    './src/shell/spa.shell.js'
+    './src/**/*.js'
 
 ];
 
 var libJS = [
-    './libs/jquery/dist/jquery.js'
+    './libs/angular/angular.js',
+    './libs/angular-ui-router/release/angular-ui-router.js'
 ];
 
 var templatesHTML = [
