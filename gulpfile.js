@@ -14,6 +14,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var flatten = require('gulp-flatten');
 var bower = require('gulp-bower');
 var eslint = require('gulp-eslint');
+var ngAnnotate = require('gulp-ng-annotate');
 
 var fontsSrc = [
     './src/assets/fonts/**/*'
@@ -31,7 +32,8 @@ var jsSources = [
 
 var libJS = [
     './libs/angular/angular.js',
-    './libs/angular-ui-router/release/angular-ui-router.js'
+    './libs/angular-ui-router/release/angular-ui-router.js',
+    './libs/angular-local-storage/dist/angular-local-storage.js'
 ];
 
 var templatesHTML = [
@@ -66,6 +68,7 @@ gulp.task('removeLibs', function () {
 gulp.task('appJS', function () {
     var wrap = require("gulp-wrap");
     return series(gulp.src(jsSources))
+        .pipe(ngAnnotate())
         .pipe(processJS('app.min.js'))
         .pipe(gulp.dest('./build/js'));
 });
@@ -132,7 +135,7 @@ gulp.task('browserSync', function () {
         server : {
             baseDir : './build'
         },
-        https : true,
+        https : false,
         notify : {
             styles : [
                 "display: none",
