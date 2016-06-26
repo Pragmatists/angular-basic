@@ -6,12 +6,14 @@ module.exports = function () {
             return {
                 id: n,
                 name: faker.commerce.productName(),
-                price: faker.commerce.price()
+                price: faker.commerce.price(),
+                image: faker.image.imageUrl()
             }
         }),
         user: {
             login: "user",
             password: "pas"
-        }
+        },
+        basket: []
     }
 };
