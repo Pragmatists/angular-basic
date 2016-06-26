@@ -33,8 +33,7 @@ var jsSources = [
 var libJS = [
     './libs/angular/angular.js',
     './libs/angular-ui-router/release/angular-ui-router.js',
-    './libs/angular-local-storage/dist/angular-local-storage.js',
-    './libs/lodash/lodash.js'
+    './libs/angular-local-storage/dist/angular-local-storage.js'
 ];
 
 var templatesHTML = [
