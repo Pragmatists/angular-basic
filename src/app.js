@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ui.router', 'LocalStorageModule']);
+var app = angular.module('app', ['ui.router']);
 
 app.config(function ($stateProvider, $locationProvider, $urlRouterProvider) {
 
@@ -21,11 +21,3 @@ app.config(function ($stateProvider, $locationProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/login');
 });
 
-app.run(function($rootScope, localStorageService, $state) {
-    $rootScope.$on('$stateChangeSuccess',
-        function(event, toState, toParams, fromState, fromParams, options){
-            if(toState !== 'login' && localStorageService.get('login') === undefined){
-                $state.go('login');
-            }
-        });
-});
