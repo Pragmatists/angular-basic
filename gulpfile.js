@@ -30,9 +30,7 @@ var jsSources = [
 
 ];
 
-var libJS = [
-    './libs/jquery/dist/jquery.js'
-];
+var libJS = [];
 
 var templatesHTML = [
     './src/**/*.html',
