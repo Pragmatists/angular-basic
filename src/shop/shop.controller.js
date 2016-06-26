@@ -17,20 +17,21 @@ function shopCtrl(shop, $rootScope) {
 
     function getProducts(){
         shop.getProducts().then(function(res){
-            vm.products = addBasketParameter(res.data);
-        })
+            vm.products = parseProducts(res.data);
+        });
     }
 
     function addToBasket(product){
         shop.addToBasket(product).then(function () {
             product.basket = true;
             $rootScope.$broadcast('basket.update');
-        })
+        });
     }
 
-    function addBasketParameter(products){
-        return _.forEach(products, function(value, key) {
+    function parseProducts(products) {
+        return _.forEach(products, function (value, key) {
             value.basket = false;
+            value.price = parseInt(value.price);
         });
     }
 }

@@ -19,7 +19,7 @@ function basketCtrl(basket, $scope) {
     function loadBasket(){
         basket.getProducts().then(function(res){
             vm.products = res.data;
-        })
+        });
     }
 
 }
