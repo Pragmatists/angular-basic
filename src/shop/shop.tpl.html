@@ -2,7 +2,6 @@
     <div class="filter">
         <button ng-click="shop.order='price'">Order by Price</button>
         <button ng-click="shop.order='name'">Order by name</button>
-        <div ng-include="'templates/basket.tpl.html'"></div>
     </div>
     <div class="products">
         <div class="product" ng-repeat="product in shop.products | orderBy : shop.order">
