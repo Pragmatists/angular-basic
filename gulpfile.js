@@ -15,6 +15,7 @@ var flatten = require('gulp-flatten');
 var bower = require('gulp-bower');
 var eslint = require('gulp-eslint');
 var ngAnnotate = require('gulp-ng-annotate');
+var proxyMiddleware = require('http-proxy-middleware');
 
 var fontsSrc = [
     './src/assets/fonts/**/*'
@@ -133,9 +134,10 @@ gulp.task('index', function () {
 gulp.task('browserSync', function () {
     browserSync.init({
         server : {
-            baseDir : './build'
+            baseDir : './build',
+            middleware: proxyMiddleware('/api', {target: 'http://localhost:3000', pathRewrite: {'^/api': '/'}})
         },
-        https : false,
+        https : true,
         notify : {
             styles : [
                 "display: none",

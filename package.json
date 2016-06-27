@@ -21,6 +21,7 @@
     "stream-series": "~0.1.1",
     "gulp-flatten": "*",
     "gulp-eslint": "2.0.0",
-    "gulp-ng-annotate": "*"
+    "gulp-ng-annotate": "*",
+    "http-proxy-middleware": "0.16.0"
   }
 }

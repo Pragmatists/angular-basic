@@ -8,6 +8,6 @@ function user($http) {
     };
 
     function login(){
-        return $http.get('http://localhost:3000/user');
+        return $http.get('/api/user');
     }
 }
