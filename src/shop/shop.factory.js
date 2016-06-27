@@ -8,6 +8,6 @@ function shop($http) {
     };
 
     function getProducts(){
-        return $http.get('http://localhost:3000/products');
+        return $http.get('/api/products');
     }
 }
