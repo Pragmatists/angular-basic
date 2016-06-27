@@ -1,24 +1,17 @@
-<div class="login-screen">
-    <form id="FORM_1">
-        <h2 id="H2_2">
+<div id="login-screen">
+    <form class="form">
+        <h2 class="form__title">
             Please sign in
         </h2>
-        <label for="login" id="LABEL_3">
+        <label for="login" class="form__label">
             Login
         </label>
-        <input ng-model="login.name" type="text" id="INPUT_4" placeholder="Login name"/>
-        <label for="inputPassword" id="LABEL_5">
+        <input  class="form__input" ng-model="login.name" type="text" id="login" placeholder="Login name"/>
+        <label for="inputPassword" class="form__label">
             Password
         </label>
-        <input ng-model="login.password" type="password" id="INPUT_6" placeholder="Password"/>
-
-        <div id="DIV_7">
-
-            <label id="LABEL_8">
-                <input type="checkbox" value="remember-me" id="INPUT_9"/> Remember me
-            </label>
-        </div>
-        <button type="submit" id="BUTTON_10" ng-click="login.login()">
+        <input class="form__input" ng-model="login.password" type="password" id="inputPassword" placeholder="Password"/>
+        <button class="form__submit-button" type="submit" ng-click="login.login()">
             Sign in
         </button>
     </form>
