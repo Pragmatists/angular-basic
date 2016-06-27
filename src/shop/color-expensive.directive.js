@@ -15,7 +15,7 @@ function colorExpensive() {
 
     function link(scope, element, attrs) {
         if(parseInt(scope.price) > 500) {
-            element.addClass('expensive');
+            element.addClass('product__price--expensive');
         }
     }
 }

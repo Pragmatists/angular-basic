@@ -1,6 +1,9 @@
 .shop{
 
-  .shop__filter{
+  &__basket{
+    margin-top:5px;
+  }
+  &__filter{
     margin-top:10px;
   }
 
