@@ -1,9 +1,9 @@
 /* recommended */
 angular
     .module('app')
-    .directive('doMagic', doMagic);
+    .directive('colorExpensive', colorExpensive);
 
-function doMagic() {
+function colorExpensive() {
     var directive = {
         link: link,
         restrict: 'A',

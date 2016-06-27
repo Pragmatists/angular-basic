@@ -7,7 +7,7 @@
     <div class="products">
         <div class="product" ng-repeat="product in shop.products | orderBy : shop.order">
             <div ng-bind="product.name" ng-class="{'inBasket': product.basket}"></div>
-            <div ng-bind="product.price" do-magic price="product.price"></div>
+            <div ng-bind="product.price" color-expensive="" price="product.price"></div>
             <button ng-click="shop.addToBasket(product)">Add to basket</button>
         </div>
     </div>

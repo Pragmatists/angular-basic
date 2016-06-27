@@ -9,10 +9,10 @@ function shop($http) {
     };
 
     function getProducts(){
-        return $http.get('http://localhost:3000/products');
+        return $http.get('/api/products');
     }
 
     function addToBasket(product){
-        return $http.post('http://localhost:3000/basket', product);
+        return $http.post('/api/basket', product);
     }
 }
