@@ -6,6 +6,7 @@ function shopCtrl(shop, $rootScope) {
     var vm = this;
 
     vm.addToBasket = addToBasket;
+    vm.any = "any";
 
     init();
 

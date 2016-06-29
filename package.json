@@ -22,6 +22,18 @@
     "gulp-flatten": "*",
     "gulp-eslint": "2.0.0",
     "gulp-ng-annotate": "*",
-    "http-proxy-middleware": "0.16.0"
+    "http-proxy-middleware": "0.16.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.8",
+    "karma-junit-reporter": "^0.4.1",
+    "protractor": "^3.2.2"
+  },
+  "scripts": {
+    "pretest": "npm install",
+    "test": "karma start karma.conf.js",
+    "test-single-run": "karma start karma.conf.js --single-run"
   }
 }

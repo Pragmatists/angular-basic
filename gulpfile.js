@@ -35,7 +35,9 @@ var libJS = [
     './libs/angular/angular.js',
     './libs/angular-ui-router/release/angular-ui-router.js',
     './libs/angular-local-storage/dist/angular-local-storage.js',
-    './libs/lodash/lodash.js'
+    './libs/lodash/lodash.js',
+    './libs/angular-mocks/angular-mocks.js'
+
 ];
 
 var templatesHTML = [
